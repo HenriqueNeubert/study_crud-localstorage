@@ -1,0 +1,212 @@
+/*DEFAULT*/
+
+:root {
+      --primary: #3a3a3a;
+}
+.t-center{
+      text-align: center;
+}
+.botton a{
+      color: #fff;
+      text-decoration: none;
+      background-color: var(--primary);
+
+      display: inline-block;
+
+      padding: 10px 25px;
+      border-radius: 25px;
+}
+
+.container{
+      max-width: 1300px;
+      margin: 0 auto;
+}
+
+.py-80{
+      padding-top: 80px;
+      padding-bottom: 80px;
+}
+
+.mb-80{
+      margin-bottom: 80px;
+}
+
+.bg-default{
+      background-color: var(--primary);
+}
+
+/*DEFAULT*/
+
+.title{
+      font-size: 20px;
+      color: #696969;
+      font-weight: 300;
+      text-align: center;
+}
+
+.title strong{
+      color: var(--primary);
+      font-size: 30px;      
+      font-weight: 700;
+}
+
+.blog{
+      display: flex;
+      justify-content: center;
+}
+
+.blog .item{  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      width: 33.33%;
+      padding: 20px;
+}
+
+.blog .item .head{
+      display: flex;
+      align-items: center; 
+
+      padding: 30px 20px;
+}
+
+.blog .item .content{
+      background-color: #fff;
+      text-align: center;
+      padding: 5px 15px 20px 15px;
+}
+
+.blog .item .content *{
+      color: black;
+}
+
+.blog .item img{  
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      object-fit: cover;
+      padding-right: 10px;
+}
+
+.blog .item h2, .blog .item p{
+      overflow: hidden; /* remove o estouro do elemento */
+      text-overflow: ellipsis; /* adiciona “...” no final */
+      display: -webkit-box;
+      -webkit-line-clamp: 2; 
+      -webkit-box-orient: vertical;
+
+      color: #fff;
+      font-size: 18px;
+}
+
+.blog .item p{
+      font-size: 14px;
+      margin-bottom: 20px;
+}
+
+.blog .item a{
+      font-size: 16px;
+
+      color: var(--primary)!important;
+      text-decoration: none;
+}
+
+.blog .item span{
+      padding-left: 10px;
+
+      color: #fff;
+      font-size: 18px;
+}
+
+.main-form{
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+
+      padding: 30px 20px;
+      margin-bottom: 40px;
+}
+
+.main-form input{
+      width: 100%;
+      height: 35px;
+      margin: 0;
+      padding: 0;
+      border: none;
+      border-radius: 25px;
+}
+
+.main-form textarea{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      border-radius: 15px;
+}
+
+.main-form input[type="submit"]{
+      cursor: pointer;
+      padding: 10px 25px;
+      width: initial!important;
+}
+
+.main-form .form-50{
+      width: 100%; 
+
+      display: flex;
+      gap: 10px;
+}
+
+.main-form .form-50 input{
+      width: 50%;
+}
+
+.main-form .check{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+}
+
+.main-form .check input{
+      width: auto!important;
+      height: auto!important;
+
+      margin-right: 10px;
+}
+
+.main-form .check label{
+      color: #fff;
+}
+
+#table{
+      display: flex;
+      justify-content: center;
+
+      color:#fff;
+}
+
+#table td, #table th{
+      padding: 15px;
+      border: 1px solid rgb(247, 247, 247);
+
+      background-color: var(--primary);
+}
+
+#table a{
+      color:var(--primary);
+      text-decoration: none;
+
+      margin-left: 10px;
+      padding: 2px 7px;
+      border-radius: 50%;
+
+      background-color: aqua;
+}
+
+#table .delete{
+      line-height: 10px;
+      color: #fff!important;
+      background-color: red!important; 
+}
