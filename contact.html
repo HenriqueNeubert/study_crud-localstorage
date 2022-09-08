@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="responsive.css">
-      <title>Blog</title>    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+<title>Blog</title>    
 </head>
 <body>
-      <main> 
-            <section>
-                  <div class="container">
-                  
-                        <h1 class="title py-80">
-                              Fale <br>
-                              <strong>Conosco</strong>
-                        </h1>
-                        <form id="formulario" name="dados" class="bg-default main-form" method="POST">
-                              <input type="text" id="name" placeholder="Nome">
-                              <input type="text" id="email" placeholder="E-mail">
-                              <div class="form-50">
-                                    <input type="text" id="phone" placeholder="(99)99999-9999 ou (99)9999-9999">
-                                    <!-- //onblur="validationPhone(this)" 
-                                    //onfocus="validationPhone(this)" -->
-                                    
-                                    <input type="text" id="city" placeholder="Cidade">
-                              </div>
-                              <textarea name="" id="desc" cols="30" rows="10"></textarea>
-                              <div class="check">
-                                    <div>
-                                          <input type="checkbox" id="option-1">
-                                          <label for="option-1">Termos e contrato*</label>
-                                    </div>
-                                    <div>
-                                          <input type="checkbox" id="option-2">
-                                          <label for="option-2">Assine nossa Newslleter</label>
-                                    </div>
-                                    <div>
-                                          <input type="checkbox" id="option-3">
-                                          <label for="option-3">Receba informações via Whatsapp</label>
-                                    </div>
-                              </div>
-                              <div class="t-center">
-                                    <input type="submit" id="submit" value="ENVIAR">
-                              </div>
-                        </form>
-                        
-                        <div id="table" class="mb-80">
-                              <table id="lineTable">                                    
-                                    <tr id="headTable">                                    
-                                          <th>
-                                                Nome
-                                          </th>
-                                          
-                                          <th>
-                                                Data/Hora
-                                          </th>                                    
-                                    </tr>                                    
-                              </table>
-                                    
-                        </div>
-                              
-                        <div class="botton t-center mb-80">
-                              <a href="">Inicial</a>
-                        </div>
-                  </div>
-            </section>
-      </main>
+<main> 
+<section>
+<div class="container">
+
+<h1 class="title py-80">
+Fale <br>
+<strong>Conosco</strong>
+</h1>
+<form id="formulario" name="dados" class="bg-default main-form" method="POST">
+<input type="text" id="name" placeholder="Nome">
+<input type="text" id="email" placeholder="E-mail">
+<div class="form-50">
+      <input type="text" id="phone" placeholder="(99)99999-9999 ou (99)9999-9999">
+        <!-- //onblur="validationPhone(this)" 
+      //onfocus="validationPhone(this)" -->
+      
+      <input type = "text" id = "city" placeholder = "Cidade">
+</div>
+<textarea name="" id="message" cols="30" rows="10"></textarea>
+<div class="check">
+      <div>
+            <input type="checkbox" id="checkboxA">
+            <label for="option-1">Termos e contrato*</label>
+      </div>
+      <div>
+            <input type="checkbox" id="checkboxB">
+            <label for="option-2">Assine nossa Newslleter</label>
+      </div>
+      <div>
+            <input type="checkbox" id="checkboxC">
+            <label for="option-3">Receba informações via Whatsapp</label>
+      </div>
+</div>
+<div class="t-center">
+      <input type="submit" id="submit" value="ENVIAR">
+</div>
+</form>
+
+<div id="table" class="mb-80">
+<table id="lineTable">                                       
+      <thead>
+            <th>
+                  Nome 
+            </th>
+            
+            <th>
+                  Data/Hora
+            </th> 
+      </thead>
+      <tbody>
+      </tbody>
+</table>
+      
+</div>
+
+<div class="botton t-center mb-80">
+<a href="">Inicial</a>
+</div>
+</div>
+</section>
+</main>
 </body>
-      <script type="module" src="app.js"></script>
+<script type="module" src="app.js"></script>
 </html>

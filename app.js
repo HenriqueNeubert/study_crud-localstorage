@@ -1,56 +1,114 @@
 import {validationInfo} from './lib/validation.js'; //! mudar para geral 
-import {localstorage} from './lib/bd_localstorage.js'; //! mudar para geral 
+// import {localstorage} from './lib/bd_localstorage.js'; 
 
-// import * as validations from './lib/validations.js';
-// import {cep} from './lib/apicep.js'; 
+const inputName = document.getElementById('name');
+const inputEmail = document.getElementById('email');
+const inputPhone = document.getElementById('phone');
+const inputMessage = document.getElementById('message');
+const inputCity = document.getElementById('city');
+const inputCheckboxA = document.getElementById('checkboxA');
 
-// function myFunction(e){
-//       e.preventDefault() // CANCELA O EVENTO DE ENVIO
-//       const arr = [] // CRIA UM ARRAY
+function handleFormSubmit(event) 
+{
+      event.preventDefault();
 
-//       const valueName = inputName.value // PEGA VALOR DO NAME
-//       const valueEmail = inputEmail.value // PEGA VALOR DO E-MAIL//
-      // debugger abrir
-      // arr.push({ // PUSH - ADICIONA UM OU MAIS ELEMENTOS AO ARRAY 
-      //       name: valueName,
-      //       email: valueEmail,
-      // })  
-      // arr.push({
-      //       name: 'Henrique',
-      //       email: valueEmail,
-      // })     
-      // arr.push({
-      //       name: 'Jose',
-      //       email: valueEmail,
-      // }) 
-      // arr.push({
-      //       name: 'Neubert',
-      //       email: valueEmail,
-      // })         
+      const objectContactData = getContactData()  
       
-      // const searchJose = arr.find(pessoa => {
-      //       if (pessoa.name === "Jose"){
-      //             return pessoa;
-      //       }                        
-      // })
-      // const searchJose2 = arr.filter(pessoa => {
-      //       if (pessoa.name === "Jose"){
-      //             return pessoa;
-      //       }                        
-      // })
-      // const searchJose3 = arr.includes(pessoa => {
-      //       if (pessoa.name === "Jose"){
-      //             return pessoa;
-      //       }                        
-      // })
+      if(!validationInfo(objectContactData)){     
+            return false 
+      }
+      
+      handleInsertLocalStorage(objectContactData)
 
-      // debugger
-      // alert(valueName) // RETORNO O VALOR PREENCHIDO
-      // alert(valueEmail) 
-// }//
+      handleDataList()
+}
+// Invoke function
+handleDataList()
+
+function handleDataList()
+{
+      const arr = getDataLocalstorage()
+      let htmlList = ''
+
+      arr.map((item, index)=>{//callback
+            htmlList += 
+            `<tr>
+                  <td>
+                        ${item.name}
+                  </td>
+                  <td>
+                        ${item.date} - ${item.hour}
+                  </td>
+                  <td>
+                        <button index="${index}">
+                              +
+                        </button>
+                  </td>
+            </tr>`
+      })
+      
+      const tableBody = document.querySelector('tbody')
+      tableBody.innerHTML = htmlList
+      const buttons = document.querySelectorAll('button')
+debugger
+      buttons.forEach(button => button.addEventListener('click', 
+      detailItem))
+} 
+
+function detailItem(elem)
+{
+      const index = elem.getAttribute('index')
+
+      const arr = getDataLocalstorage()
+      const item = arr[index]
+      const details = 
+      `
+      Nome = ${item.name}
+      `
+      alert(details)
+}
+
+function handleInsertLocalStorage(objectContactData)
+{
+      const arr = getDataLocalstorage()
+
+      arr.push(objectContactData)
+      
+      insertLocalStorage(arr)
+}
+
+function getDataLocalstorage()
+{
+      const dataLocalStorage = localStorage.getItem('contacts')
+      if(dataLocalStorage){
+            return JSON.parse(dataLocalStorage)
+      }
+
+      return []
+}
+
+function insertLocalStorage(arr)
+{
+      arr = JSON.stringify(arr)
+      localStorage.setItem('contacts', arr)
+}
+
+function getContactData()
+{
+      return {
+            name: inputName.value,
+            phone: inputPhone.value,
+            email: inputEmail.value,
+            city: inputCity.value,
+            message: inputMessage.value,
+            checkboxA: true,
+            date: new Date().toLocaleDateString(),
+            hour: new Date().toLocaleTimeString(),
+      }
+}
 
 document.getElementById('formulario').addEventListener(
-      'submit', validationInfo, false // 
+      'submit', handleFormSubmit, false // 
 );
 
 
