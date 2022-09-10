@@ -28,7 +28,7 @@ Fale <br>
       <input type = "text" id = "city" placeholder = "Cidade">
 </div>
 <textarea name="" id="message" cols="30" rows="10"></textarea>
-<div class="check">
+<div class="check" id="check">
       <div>
             <input type="checkbox" id="checkboxA">
             <label for="option-1">Termos e contrato*</label>
@@ -41,6 +41,7 @@ Fale <br>
             <input type="checkbox" id="checkboxC">
             <label for="option-3">Receba informações via Whatsapp</label>
       </div>
+      <input type="hidden" id="index">
 </div>
 <div class="t-center">
       <input type="submit" id="submit" value="ENVIAR">
@@ -51,11 +52,18 @@ Fale <br>
 <table id="lineTable">                                       
       <thead>
             <th>
+                  ID
+            </th> 
+            <th>
                   Nome 
             </th>
             
             <th>
                   Data/Hora
+            </th> 
+            
+            <th>
+                  Ações
             </th> 
       </thead>
       <tbody>

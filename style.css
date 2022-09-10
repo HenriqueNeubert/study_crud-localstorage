@@ -3,6 +3,15 @@
 :root {
       --primary: #3a3a3a;
 }
+
+*{
+      color: #fff!important;
+}
+
+body{
+      background: #3a3a3a;
+}
+
 .t-center{
       text-align: center;
 }
@@ -183,8 +192,6 @@
 #table{
       display: flex;
       justify-content: center;
-
-      color:#fff;
 }
 
 #table td, #table th{
@@ -194,19 +201,22 @@
       background-color: var(--primary);
 }
 
-#table a{
-      color:var(--primary);
+#table button{
+      cursor: pointer;
+      color: var(--primary)!important;
+      line-height: 10px;
+
       text-decoration: none;
 
       margin-left: 10px;
-      padding: 2px 7px;
-      border-radius: 50%;
+      border-radius: 100%;
 
+      width: 25px;
+      height: 25px;
       background-color: aqua;
 }
 
-#table .delete{
-      line-height: 10px;
-      color: #fff!important;
-      background-color: red!important; 
+#table .edit{
+      width: auto;
+      border-radius: 20%;
 }
