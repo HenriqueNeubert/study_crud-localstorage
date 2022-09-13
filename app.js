@@ -5,7 +5,7 @@ import {validationInfo} from './lib/validation.js'; //! mudar para geral
 
 function darkMode()
 {
-      
+       
 }
 
 const mainForm = document.getElementById('formulario')
