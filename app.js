@@ -1,12 +1,4 @@
-import {validationInfo} from './lib/validation.js'; //! mudar para geral 
-// import {localstorage} from './lib/bd_localstorage.js'; 
-
-//Provisório
-
-function darkMode()
-{
-       
-}
+import {validationInfo} from './lib/validation.js';
 
 const mainForm = document.getElementById('formulario')
 const inputName = document.getElementById('name');
